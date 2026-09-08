@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"
+    content="Pengumuman dan hebahan rasmi Masjid Ar-Rahmah Sarikei, Sarawak.">
+
+    <title>Pengumuman | Masjid Ar-Rahmah Sarikei</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #FAFAF7;
+            color: #1F2933;
+        }
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+         }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 14px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .site-logo {
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            color: #075C2A;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .brand-location {
+            color: #5B6570;
+            font-size: 13px;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        .main-nav a {
+            color: #1F2933;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .main-nav a:hover {
+            color: #087A35;
+        }
+
+        .page-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #087A35;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .pengumuman-section {
+            background: #ffffff;
+            padding: 38px 28px;
+            border-radius: 20px;
+            border-top: 6px solid #008CCF;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+        }
+
+        .pengumuman-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .pengumuman-header-decoration {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .pengumuman-header-decoration span {
+            width: 110px;
+            height: 1px;
+            background: #9dcde3;
+        }
+
+        .pengumuman-icon {
+            font-size: 27px;
+        }
+
+        .pengumuman-header h1 {
+            color: #075C2A;
+            font-size: 32px;
+            margin: 5px 0 8px;
+        }
+
+        .pengumuman-header p {
+            color: #5B6570;
+            font-size: 17px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .pengumuman-list {
+            display: grid;
+            gap: 24px;
+        }
+
+        .pengumuman-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f7fcff, #f2faf6);
+            border: 1px solid #dceaf0;
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .pengumuman-card::after {
+            content: "☪";
+            position: absolute;
+            right: 18px;
+            top: 12px;
+            font-size: 90px;
+            color: rgba(8, 122, 53, 0.05);
+            pointer-events: none;
+        }
+
+        .kategori-pill {
+            display: inline-block;
+            background: #e7f5fb;
+            color: #006f9f;
+            padding: 7px 13px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .pengumuman-title {
+            color: #075C2A;
+            font-size: 30px;
+            line-height: 1.3;
+            margin: 0 0 14px;
+        }
+
+        .pengumuman-body {
+            font-size: 18px;
+            line-height: 1.7;
+            margin: 0 0 28px;
+            white-space: pre-line;
+        }
+
+        .pengumuman-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .info-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px 14px;
+            text-align: center;
+            min-height: 145px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid #e7ecef;
+        }
+
+        .info-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .info-label {
+            color: #5B6570;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .info-value {
+            color: #075C2A;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .invitation {
+            margin-top: 22px;
+            padding-top: 20px;
+            border-top: 1px solid #dce6e1;
+            color: #5B6570;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .more-link {
+            display: inline-block;
+            margin-top: 18px;
+            background: #087A35;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        .empty-message,
+        .error-message {
+            text-align: center;
+            color: #5B6570;
+            padding: 30px 10px;
+        }
+
+        .error-message {
+            color: #9B1C1C;
+        }
+
+        @media (max-width: 700px) {
+            .main-nav {
+                display: none;
+            }
+
+            .page-container {
+                margin-top: 25px;
+            }
+
+            .pengumuman-section {
+                padding: 28px 16px;
+            }
+
+            .pengumuman-header h1 {
+                font-size: 27px;
+            }
+
+            .pengumuman-title {
+                font-size: 24px;
+            }
+
+            .pengumuman-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pengumuman-header-decoration span {
+                width: 65px;
+            }
+        }
+
+        /* =========================
+           MOBILE BOTTOM NAVIGATION
+           ========================= */
+
+        .mobile-bottom-nav,
+        .mobile-more-menu {
+            display: none;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding-bottom: 88px;
+            }
+
+            .mobile-bottom-nav {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 9999;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                background: #ffffff;
+                border-top: 1px solid #dfe7e2;
+                box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.08);
+            }
+
+            .mobile-bottom-nav a,
+            .mobile-bottom-nav button {
+                min-height: 68px;
+                padding: 8px 4px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3px;
+                border: none;
+                background: transparent;
+                color: #5b6570;
+                font: inherit;
+                font-size: 12px;
+                font-weight: 700;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .mobile-bottom-nav .nav-icon {
+                font-size: 22px;
+                line-height: 1;
+            }
+
+            .mobile-bottom-nav a.active {
+                color: #087a35;
+                background: #f1f8f3;
+            }
+
+            .mobile-bottom-nav a:hover,
+            .mobile-bottom-nav button:hover,
+            .mobile-bottom-nav a:focus-visible,
+            .mobile-bottom-nav button:focus-visible {
+                color: #087a35;
+                background: #f1f8f3;
+                outline: none;
+            }
+
+            .mobile-more-menu {
+                position: fixed;
+                left: 14px;
+                right: 14px;
+                bottom: 80px;
+                z-index: 9998;
+                background: #ffffff;
+                border: 1px solid #dfe7e2;
+                border-radius: 18px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+                padding: 10px;
+            }
+
+            .mobile-more-menu.open {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            .mobile-more-menu a {
+                min-height: 54px;
+                padding: 12px;
+                display: flex;
+                align-items: center;
+                border-radius: 12px;
+                background: #fafaf7;
+                color: #075c2a;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            .mobile-more-menu a:hover,
+            .mobile-more-menu a:focus-visible {
+                background: #eaf5ed;
+                outline: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <div class="brand">
+            <img
+                src="logo.png"
+                alt="Logo Masjid Ar-Rahmah Sarikei"
+                class="site-logo"
+            >
+
+            <div>
+                <div class="brand-name">
+                    Masjid Ar-Rahmah Sarikei
+                </div>
+
+                <div class="brand-location">
+                    Sarikei, Sarawak
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Utama</a>
+            <a href="kematian.html">Kematian</a>
+            <a href="kutipan.html">Kutipan</a>
+            <a href="pengumuman.html">Pengumuman</a>
+        </nav>
+
+    </div>
+</header>
+
+<main class="page-container">
+
+    <a href="index.html" class="back-link">
+        ← Kembali ke Utama
+    </a>
+
+    <section class="pengumuman-section">
+
+        <div class="pengumuman-header">
+
+            <div class="pengumuman-header-decoration">
+                <span></span>
+                <div class="pengumuman-icon">📣</div>
+                <span></span>
+            </div>
+
+            <h1>Pengumuman</h1>
+
+            <p>
+                Maklumat dan hebahan rasmi
+                Masjid Ar-Rahmah Sarikei
+            </p>
+
+        </div>
+
+        <div
+            id="pengumuman-data"
+            class="pengumuman-list"
+        >
+            Memuatkan pengumuman...
+        </div>
+
+    </section>
+
+</main>
+
+
+<nav class="mobile-bottom-nav" aria-label="Navigasi mudah alih">
+    <a href="index.html">
+        <span class="nav-icon">🏠</span>
+        <span>Utama</span>
+    </a>
+
+    <a href="pengumuman.html" class="active" aria-current="page">
+        <span class="nav-icon">📣</span>
+        <span>Pengumuman</span>
+    </a>
+
+    <a href="aktiviti.html">
+        <span class="nav-icon">📅</span>
+        <span>Aktiviti</span>
+    </a>
+
+    <button type="button" id="mobileMoreButton" aria-expanded="false" aria-controls="mobileMoreMenu">
+        <span class="nav-icon">☰</span>
+        <span>Lagi</span>
+    </button>
+</nav>
+
+<div class="mobile-more-menu" id="mobileMoreMenu">
+    <a href="kematian.html">🕊️ Kematian</a>
+    <a href="kutipan.html">💰 Kutipan</a>
+    <a href="index.html#sumbangan">🤲 Sumbangan</a>
+    <a href="index.html#maklumat-masjid">📍 Maklumat Masjid</a>
+</div>
+
+
+<script>
+
+const API_URL =
+    "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnT3hjjtmDgiAI95TcthDeoUg2YAfEwkIDs7yxlogxCUrheduEDFc52P8QdBcbPk17iUqSbySPPQjMn4D6cOuWoF3yDq0ViW5vaIPJAiRi4htooArJ9geD5ZlmaTp_Q8aq0Kxc-1WS4ymxC8pW5IFO7Vc75jpnM7WBRj5wnWEI-EIdnyTl30QDApXiE9gVEJCbjkCN2wxNT6LmuDS2pg064qtiZQKzohQpxm1WD_fj15wGOMG7c_IstTsiUAVylPZl5t2Iiv_jJ2tlcrRpGmvs0yGLCxzw&lib=MJE8yEfkfGXi95HyhXqmG7zPvk22uQMVR";
+
+
+function formatDate(dateString) {
+    if (!dateString) return "-";
+
+    return new Date(
+        dateString + "T00:00:00"
+    ).toLocaleDateString(
+        "ms-MY",
+        {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }
+    );
+}
+
+
+function isProgramAnnouncement(category) {
+    const text =
+        String(category || "")
+        .toLowerCase();
+
+    return (
+        text.includes("program") ||
+        text.includes("gotong") ||
+        text.includes("kuliah") ||
+        text.includes("ceramah")
+    );
+}
+
+
+async function loadPengumuman() {
+
+    const container =
+        document.getElementById(
+            "pengumuman-data"
+        );
+
+    try {
+
+        const response =
+            await fetch(API_URL);
+
+        const data =
+            await response.json();
+
+
+        if (
+            !data.success ||
+            !data.pengumuman ||
+            data.pengumuman.length === 0
+        ) {
+
+            container.innerHTML = `
+                <div class="empty-message">
+                    Tiada pengumuman aktif
+                    buat masa ini.
+                </div>
+            `;
+
+            return;
+        }
+
+
+        container.innerHTML =
+            data.pengumuman.map(
+                announcement => {
+
+                    const hasProgramDetails =
+                        announcement.tarikhProgram ||
+                        announcement.masaProgram ||
+                        announcement.lokasi;
+
+
+                    const programInfo =
+                        hasProgramDetails
+                        ? `
+                            <div class="pengumuman-info-grid">
+
+                                <div class="info-box">
+                                    <div class="info-icon">
+                                        📅
+                                    </div>
+
+                                    <div class="info-label">
+                                        Tarikh
+                                    </div>
+
+                                    <div class="info-value">
+                                        ${
+                                            announcement.tarikhProgram
+                                                ? formatDate(
+                                                    announcement.tarikhProgram
+                                                  )
+                                                : "-"
+                                        }
+                                    </div>
+                                </div>
+
+
+                                <div class="info-box">
+                                    <div class="info-icon">
+                                        🕐
+                                    </div>
+
+                                    <div class="info-label">
+                                        Masa
+                                    </div>
+
+                                    <div class="info-value">
+                                        ${
+                                            announcement.masaProgram
+                                                || "-"
+                                        }
+                                    </div>
+                                </div>
+
+
+                                <div class="info-box">
+                                    <div class="info-icon">
+                                        📍
+                                    </div>
+
+                                    <div class="info-label">
+                                        Lokasi
+                                    </div>
+
+                                    <div class="info-value">
+                                        ${
+                                            announcement.lokasi
+                                                || "-"
+                                        }
+                                    </div>
+                                </div>
+
+                            </div>
+                        `
+                        : "";
+
+
+                    const invitation =
+                        isProgramAnnouncement(
+                            announcement.kategori
+                        )
+                        ? `
+                            <div class="invitation">
+                                Semua jemaah dijemput hadir
+                                dan menyertai program ini.
+                            </div>
+                        `
+                        : "";
+
+
+                    const link =
+                        announcement.pautan
+                        ? `
+                            <div style="text-align:center;">
+                                <a
+                                    href="${announcement.pautan}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="more-link"
+                                >
+                                    Maklumat Lanjut
+                                </a>
+                            </div>
+                        `
+                        : "";
+
+
+                    return `
+                        <article class="pengumuman-card">
+
+                            <div class="kategori-pill">
+                                📣 ${announcement.kategori || "Umum"}
+                            </div>
+
+                            <h2 class="pengumuman-title">
+                                ${announcement.tajuk || "-"}
+                            </h2>
+
+                            <p class="pengumuman-body">
+                                ${announcement.isi || ""}
+                            </p>
+
+                            ${programInfo}
+
+                            ${invitation}
+
+                            ${link}
+
+                        </article>
+                    `;
+                }
+            ).join("");
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        container.innerHTML = `
+            <div class="error-message">
+                Pengumuman tidak dapat
+                dimuatkan buat masa ini.
+            </div>
+        `;
+    }
+}
+
+
+loadPengumuman();
+
+</script>
+
+
+<script>
+const mobileMoreButton = document.getElementById("mobileMoreButton");
+const mobileMoreMenu = document.getElementById("mobileMoreMenu");
+
+mobileMoreButton.addEventListener("click", () => {
+    const isOpen = mobileMoreMenu.classList.toggle("open");
+    mobileMoreButton.setAttribute("aria-expanded", isOpen);
+
+    if (isOpen) {
+        mobileMoreButton.style.color = "#087A35";
+        mobileMoreButton.style.background = "#F1F8F3";
+    } else {
+        mobileMoreButton.style.color = "";
+        mobileMoreButton.style.background = "";
+    }
+});
+
+document.addEventListener("click", (event) => {
+    const clickedInsideMenu = mobileMoreMenu.contains(event.target);
+    const clickedButton = mobileMoreButton.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedButton) {
+        mobileMoreMenu.classList.remove("open");
+        mobileMoreButton.setAttribute("aria-expanded", "false");
+        mobileMoreButton.style.color = "";
+        mobileMoreButton.style.background = "";
+    }
+});
+</script>
+
+</body>
+</html>

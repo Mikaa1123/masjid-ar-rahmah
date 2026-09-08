@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Program, kuliah dan aktiviti Masjid Ar-Rahmah Sarikei."
+    >
+
+    <title>
+        Aktiviti | Masjid Ar-Rahmah Sarikei
+    </title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #FAFAF7;
+            color: #1F2933;
+        }
+
+
+        /* ==========================================================
+           HEADER
+        ========================================================== */
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+
+            padding: 14px 22px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .site-logo {
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+        }
+
+
+        .brand-name {
+            color: #075C2A;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+
+        .brand-location {
+            color: #5B6570;
+            font-size: 13px;
+        }
+
+
+        .main-nav {
+            display: flex;
+            gap: 24px;
+        }
+
+
+        .main-nav a {
+            color: #1F2933;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+
+        .main-nav a:hover {
+            color: #087A35;
+        }
+
+
+
+        /* ==========================================================
+           PAGE
+        ========================================================== */
+
+        .page-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+
+            color: #087A35;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+
+        .back-link:hover {
+            color: #075C2A;
+        }
+
+
+
+        /* ==========================================================
+           MAIN SECTION
+        ========================================================== */
+
+        .aktiviti-section {
+            background: #ffffff;
+
+            padding: 38px 28px;
+
+            border-radius: 20px;
+            border-top: 6px solid #087A35;
+
+            box-shadow:
+                0 8px 28px rgba(0,0,0,0.08);
+        }
+
+
+        .aktiviti-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+        .aktiviti-decoration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .aktiviti-decoration span {
+            width: 110px;
+            height: 1px;
+
+            background: #9dc8ae;
+        }
+
+
+        .aktiviti-icon {
+            font-size: 27px;
+        }
+
+
+        .aktiviti-header h1 {
+            color: #075C2A;
+
+            font-size: 32px;
+
+            margin: 5px 0 8px;
+        }
+
+
+        .aktiviti-header p {
+            color: #5B6570;
+
+            font-size: 17px;
+            line-height: 1.6;
+
+            margin: 0;
+        }
+
+
+
+        /* ==========================================================
+           LIST
+        ========================================================== */
+
+        .aktiviti-list {
+            display: grid;
+            gap: 22px;
+        }
+
+
+        .aktiviti-card {
+            background:
+                linear-gradient(
+                    135deg,
+                    #f7fcf8,
+                    #f7fbff
+                );
+
+            border: 1px solid #dfeae3;
+
+            border-radius: 18px;
+
+            padding: 28px;
+        }
+
+
+
+        /* ==========================================================
+           STATUS
+        ========================================================== */
+
+        .aktiviti-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 14px;
+        }
+
+
+        .aktiviti-category {
+            display: inline-block;
+
+            background: #e8f5ec;
+            color: #087A35;
+
+            padding: 7px 13px;
+
+            border-radius: 999px;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        .status-badge {
+            display: inline-block;
+
+            padding: 7px 12px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        .status-today {
+            background: #FFF3CD;
+            color: #7A5700;
+        }
+
+
+        .status-upcoming {
+            background: #E5F6EA;
+            color: #087A35;
+        }
+
+
+        .status-undated {
+            background: #EEF2F7;
+            color: #5B6570;
+        }
+
+
+
+        /* ==========================================================
+           CARD CONTENT
+        ========================================================== */
+
+        .aktiviti-title {
+            color: #075C2A;
+
+            font-size: 28px;
+            line-height: 1.3;
+
+            margin: 0 0 12px;
+        }
+
+
+        .aktiviti-description {
+            font-size: 18px;
+            line-height: 1.7;
+
+            margin: 0 0 24px;
+
+            white-space: pre-line;
+        }
+
+
+        .aktiviti-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 16px;
+        }
+
+
+        .info-box {
+            background: #ffffff;
+
+            border: 1px solid #e3e9e5;
+
+            border-radius: 14px;
+
+            padding: 20px 14px;
+
+            text-align: center;
+
+            min-height: 140px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .info-icon {
+            font-size: 28px;
+            margin-bottom: 9px;
+        }
+
+
+        .info-label {
+            font-size: 12px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            color: #5B6570;
+
+            margin-bottom: 6px;
+        }
+
+
+        .info-value {
+            color: #075C2A;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            line-height: 1.4;
+        }
+
+
+        .invitation {
+            margin-top: 22px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #dce6e1;
+
+            color: #5B6570;
+
+            text-align: center;
+
+            line-height: 1.6;
+        }
+
+
+        .more-link {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            background: #087A35;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            padding: 12px 18px;
+
+            border-radius: 10px;
+
+            font-weight: 700;
+        }
+
+
+        .more-link:hover {
+            background: #075C2A;
+        }
+
+
+
+        /* ==========================================================
+           PAST ACTIVITIES
+        ========================================================== */
+
+        .past-section {
+            margin-top: 38px;
+
+            padding-top: 30px;
+
+            border-top: 1px solid #e0e7e2;
+        }
+
+
+        .past-heading {
+            text-align: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        .past-heading h2 {
+            color: #075C2A;
+
+            font-size: 23px;
+
+            margin: 0 0 6px;
+        }
+
+
+        .past-heading p {
+            margin: 0;
+
+            color: #5B6570;
+
+            line-height: 1.6;
+        }
+
+
+        .past-toggle-container {
+            text-align: center;
+        }
+
+
+        .past-toggle {
+            min-height: 48px;
+
+            padding: 12px 22px;
+
+            border: 2px solid #087A35;
+
+            border-radius: 10px;
+
+            background: #ffffff;
+            color: #087A35;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+
+        .past-toggle:hover {
+            background: #087A35;
+            color: #ffffff;
+        }
+
+
+        .past-list {
+            display: none;
+
+            margin-top: 22px;
+
+            gap: 16px;
+        }
+
+
+        .past-list.visible {
+            display: grid;
+        }
+
+
+        .past-card {
+            background: #FAFAF7;
+
+            border: 1px solid #e2e7e3;
+
+            border-radius: 14px;
+
+            padding: 20px;
+        }
+
+
+        .past-date {
+            color: #087A35;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            margin-bottom: 6px;
+        }
+
+
+        .past-card h3 {
+            color: #075C2A;
+
+            font-size: 20px;
+
+            margin: 0 0 7px;
+        }
+
+
+        .past-card p {
+            color: #5B6570;
+
+            margin: 0;
+
+            line-height: 1.6;
+        }
+
+
+
+        /* ==========================================================
+           MESSAGE
+        ========================================================== */
+
+        .empty-message,
+        .error-message {
+            text-align: center;
+
+            padding: 30px 10px;
+
+            color: #5B6570;
+
+            line-height: 1.6;
+        }
+
+
+        .error-message {
+            color: #9B1C1C;
+        }
+
+
+
+        /* ==========================================================
+           MOBILE
+        ========================================================== */
+
+        @media (max-width: 700px) {
+
+            .header-inner {
+                padding: 12px 16px;
+            }
+
+
+            .main-nav {
+                display: none;
+            }
+
+
+            .site-logo {
+                width: 46px;
+                height: 46px;
+            }
+
+
+            .brand-name {
+                font-size: 16px;
+            }
+
+
+            .page-container {
+                margin: 25px auto;
+
+                padding: 0 16px;
+            }
+
+
+            .aktiviti-section {
+                padding: 28px 16px;
+            }
+
+
+            .aktiviti-header h1 {
+                font-size: 27px;
+            }
+
+
+            .aktiviti-title {
+                font-size: 24px;
+            }
+
+
+            .aktiviti-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .aktiviti-decoration span {
+                width: 65px;
+            }
+
+
+            .aktiviti-card {
+                padding: 22px 18px;
+            }
+
+
+            .aktiviti-description {
+                font-size: 16px;
+            }
+
+
+            .aktiviti-top {
+                align-items: flex-start;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE BOTTOM NAVIGATION
+           ========================= */
+
+        .mobile-bottom-nav,
+        .mobile-more-menu {
+            display: none;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding-bottom: 88px;
+            }
+
+            .mobile-bottom-nav {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 9999;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                background: #ffffff;
+                border-top: 1px solid #dfe7e2;
+                box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.08);
+            }
+
+            .mobile-bottom-nav a,
+            .mobile-bottom-nav button {
+                min-height: 68px;
+                padding: 8px 4px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3px;
+                border: none;
+                background: transparent;
+                color: #5B6570;
+                font: inherit;
+                font-size: 12px;
+                font-weight: 700;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .mobile-bottom-nav .nav-icon {
+                font-size: 22px;
+                line-height: 1;
+            }
+
+            .mobile-bottom-nav a.active,
+            .mobile-bottom-nav button.active {
+                color: #087A35;
+                background: #F1F8F3;
+            }
+
+            .mobile-bottom-nav a:hover,
+            .mobile-bottom-nav button:hover,
+            .mobile-bottom-nav a:focus-visible,
+            .mobile-bottom-nav button:focus-visible {
+                color: #087A35;
+                background: #F1F8F3;
+                outline: none;
+            }
+
+            .mobile-more-menu {
+                position: fixed;
+                left: 14px;
+                right: 14px;
+                bottom: 80px;
+                z-index: 9998;
+                background: #ffffff;
+                border: 1px solid #dfe7e2;
+                border-radius: 18px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+                padding: 10px;
+            }
+
+            .mobile-more-menu.open {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            .mobile-more-menu a {
+                min-height: 54px;
+                padding: 12px;
+                display: flex;
+                align-items: center;
+                border-radius: 12px;
+                background: #FAFAF7;
+                color: #075C2A;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            .mobile-more-menu a:hover,
+            .mobile-more-menu a:focus-visible {
+                background: #EAF5ED;
+                outline: none;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+
+        <div class="brand">
+
+            <img
+                src="logo.png"
+                class="site-logo"
+                alt="Logo Masjid Ar-Rahmah Sarikei"
+            >
+
+
+            <div>
+
+                <div class="brand-name">
+                    Masjid Ar-Rahmah Sarikei
+                </div>
+
+                <div class="brand-location">
+                    Sarikei, Sarawak
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Utama
+            </a>
+
+            <a href="kematian.html">
+                Kematian
+            </a>
+
+            <a href="kutipan.html">
+                Kutipan
+            </a>
+
+            <a href="pengumuman.html">
+                Pengumuman
+            </a>
+
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+
+<main class="page-container">
+
+
+    <a
+        href="index.html"
+        class="back-link"
+    >
+        ← Kembali ke Utama
+    </a>
+
+
+
+    <section class="aktiviti-section">
+
+
+        <div class="aktiviti-header">
+
+
+            <div class="aktiviti-decoration">
+
+                <span></span>
+
+                <div class="aktiviti-icon">
+                    📅
+                </div>
+
+                <span></span>
+
+            </div>
+
+
+            <h1>
+                Aktiviti Masjid
+            </h1>
+
+
+            <p>
+                Program, kuliah dan aktiviti
+                Masjid Ar-Rahmah Sarikei
+            </p>
+
+
+        </div>
+
+
+
+        <div
+            id="aktiviti-data"
+            class="aktiviti-list"
+        >
+            Memuatkan aktiviti...
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<nav class="mobile-bottom-nav" aria-label="Navigasi mudah alih">
+    <a href="index.html">
+        <span class="nav-icon">🏠</span>
+        <span>Utama</span>
+    </a>
+
+    <a href="pengumuman.html">
+        <span class="nav-icon">📣</span>
+        <span>Pengumuman</span>
+    </a>
+
+    <a href="aktiviti.html" class="active" aria-current="page">
+        <span class="nav-icon">📅</span>
+        <span>Aktiviti</span>
+    </a>
+
+    <button type="button" id="mobileMoreButton" aria-expanded="false" aria-controls="mobileMoreMenu">
+        <span class="nav-icon">☰</span>
+        <span>Lagi</span>
+    </button>
+</nav>
+
+<div class="mobile-more-menu" id="mobileMoreMenu">
+    <a href="kematian.html">🕊️ Kematian</a>
+    <a href="kutipan.html">💰 Kutipan</a>
+    <a href="index.html#sumbangan">🤲 Sumbangan</a>
+    <a href="index.html#maklumat-masjid">📍 Maklumat Masjid</a>
+</div>
+
+
+
+
+<script>
+
+
+const API_URL =
+    "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnT3hjjtmDgiAI95TcthDeoUg2YAfEwkIDs7yxlogxCUrheduEDFc52P8QdBcbPk17iUqSbySPPQjMn4D6cOuWoF3yDq0ViW5vaIPJAiRi4htooArJ9geD5ZlmaTp_Q8aq0Kxc-1WS4ymxC8pW5IFO7Vc75jpnM7WBRj5wnWEI-EIdnyTl30QDApXiE9gVEJCbjkCN2wxNT6LmuDS2pg064qtiZQKzohQpxm1WD_fj15wGOMG7c_IstTsiUAVylPZl5t2Iiv_jJ2tlcrRpGmvs0yGLCxzw&lib=MJE8yEfkfGXi95HyhXqmG7zPvk22uQMVR";
+
+
+
+/* ==========================================================
+   FORMAT DATE
+========================================================== */
+
+function formatDate(dateString) {
+
+    if (!dateString) {
+        return "-";
+    }
+
+
+    const date =
+        new Date(
+            dateString + "T00:00:00"
+        );
+
+
+    if (Number.isNaN(date.getTime())) {
+        return dateString;
+    }
+
+
+    return date.toLocaleDateString(
+        "ms-MY",
+        {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }
+    );
+
+}
+
+
+
+/* ==========================================================
+   ACTIVITY CATEGORY CHECK
+========================================================== */
+
+function isActivity(category) {
+
+    const text =
+        String(category || "")
+            .toLowerCase();
+
+
+    return (
+        text.includes("program") ||
+        text.includes("gotong") ||
+        text.includes("kuliah") ||
+        text.includes("ceramah")
+    );
+
+}
+
+
+
+/* ==========================================================
+   DATE HELPERS
+========================================================== */
+
+function getTodayKey() {
+
+    const today =
+        new Date();
+
+
+    const year =
+        today.getFullYear();
+
+
+    const month =
+        String(
+            today.getMonth() + 1
+        ).padStart(2, "0");
+
+
+    const day =
+        String(
+            today.getDate()
+        ).padStart(2, "0");
+
+
+    return `${year}-${month}-${day}`;
+
+}
+
+
+
+function getActivityStatus(dateString) {
+
+    if (!dateString) {
+
+        return {
+            type: "undated",
+            label: "Tarikh Belum Ditetapkan"
+        };
+
+    }
+
+
+    const today =
+        getTodayKey();
+
+
+    if (dateString === today) {
+
+        return {
+            type: "today",
+            label: "Hari Ini"
+        };
+
+    }
+
+
+    if (dateString > today) {
+
+        return {
+            type: "upcoming",
+            label: "Akan Datang"
+        };
+
+    }
+
+
+    return {
+        type: "past",
+        label: "Selesai"
+    };
+
+}
+
+
+
+/* ==========================================================
+   CREATE UPCOMING CARD
+========================================================== */
+
+function createActivityCard(activity) {
+
+
+    const status =
+        getActivityStatus(
+            activity.tarikhProgram
+        );
+
+
+    let statusClass =
+        "status-undated";
+
+
+    if (status.type === "today") {
+
+        statusClass =
+            "status-today";
+
+    }
+
+
+    if (status.type === "upcoming") {
+
+        statusClass =
+            "status-upcoming";
+
+    }
+
+
+
+    const link =
+        activity.pautan
+            ? `
+                <div style="text-align:center;">
+
+                    <a
+                        href="${activity.pautan}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="more-link"
+                    >
+                        Maklumat Lanjut
+                    </a>
+
+                </div>
+            `
+            : "";
+
+
+
+    return `
+
+        <article class="aktiviti-card">
+
+
+            <div class="aktiviti-top">
+
+
+                <div class="aktiviti-category">
+
+                    📅
+                    ${activity.kategori || "Program Masjid"}
+
+                </div>
+
+
+                <div
+                    class="status-badge ${statusClass}"
+                >
+
+                    ${
+                        status.type === "today"
+                            ? "🟡 "
+                            : status.type === "upcoming"
+                                ? "🟢 "
+                                : ""
+                    }
+
+                    ${status.label}
+
+                </div>
+
+
+            </div>
+
+
+
+            <h2 class="aktiviti-title">
+
+                ${activity.tajuk || "-"}
+
+            </h2>
+
+
+
+            <p class="aktiviti-description">
+
+                ${activity.isi || ""}
+
+            </p>
+
+
+
+            <div class="aktiviti-info-grid">
+
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        📅
+                    </div>
+
+                    <div class="info-label">
+                        Tarikh
+                    </div>
+
+                    <div class="info-value">
+
+                        ${
+                            activity.tarikhProgram
+                                ? formatDate(
+                                    activity.tarikhProgram
+                                  )
+                                : "Belum ditetapkan"
+                        }
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        🕐
+                    </div>
+
+                    <div class="info-label">
+                        Masa
+                    </div>
+
+                    <div class="info-value">
+
+                        ${
+                            activity.masaProgram ||
+                            "Belum ditetapkan"
+                        }
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        📍
+                    </div>
+
+                    <div class="info-label">
+                        Lokasi
+                    </div>
+
+                    <div class="info-value">
+
+                        ${
+                            activity.lokasi ||
+                            "Belum ditetapkan"
+                        }
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="invitation">
+
+                Semua jemaah dijemput hadir
+                dan menyertai program ini.
+
+            </div>
+
+
+
+            ${link}
+
+
+        </article>
+
+    `;
+
+}
+
+
+
+/* ==========================================================
+   CREATE PAST CARD
+========================================================== */
+
+function createPastCard(activity) {
+
+
+    return `
+
+        <article class="past-card">
+
+
+            <div class="past-date">
+
+                📅
+                ${formatDate(
+                    activity.tarikhProgram
+                )}
+
+            </div>
+
+
+            <h3>
+
+                ${activity.tajuk || "-"}
+
+            </h3>
+
+
+            <p>
+
+                ${
+                    activity.kategori ||
+                    "Program Masjid"
+                }
+
+                ${
+                    activity.lokasi
+                        ? ` • ${activity.lokasi}`
+                        : ""
+                }
+
+            </p>
+
+
+        </article>
+
+    `;
+
+}
+
+
+
+/* ==========================================================
+   LOAD ACTIVITIES
+========================================================== */
+
+async function loadAktiviti() {
+
+
+    const container =
+        document.getElementById(
+            "aktiviti-data"
+        );
+
+
+    try {
+
+
+        const response =
+            await fetch(API_URL);
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Gagal mendapatkan data aktiviti."
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+
+        if (
+            !data.success ||
+            !Array.isArray(data.pengumuman)
+        ) {
+
+            container.innerHTML = `
+
+                <div class="empty-message">
+
+                    Tiada aktiviti untuk dipaparkan.
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+
+        /* ==================================================
+           GET ONLY PROGRAMME-TYPE ANNOUNCEMENTS
+        ================================================== */
+
+        const activities =
+            data.pengumuman.filter(
+                announcement =>
+                    isActivity(
+                        announcement.kategori
+                    )
+            );
+
+
+
+        if (activities.length === 0) {
+
+            container.innerHTML = `
+
+                <div class="empty-message">
+
+                    Tiada aktiviti akan datang
+                    buat masa ini.
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+
+        /* ==================================================
+           SPLIT CURRENT / PAST
+        ================================================== */
+
+        const currentActivities =
+            activities.filter(
+                activity =>
+                    getActivityStatus(
+                        activity.tarikhProgram
+                    ).type !== "past"
+            );
+
+
+        const pastActivities =
+            activities.filter(
+                activity =>
+                    getActivityStatus(
+                        activity.tarikhProgram
+                    ).type === "past"
+            );
+
+
+
+        /* ==================================================
+           SORT UPCOMING
+           Today first, then nearest future date.
+           No-date programmes go last.
+        ================================================== */
+
+        currentActivities.sort(
+            (a, b) => {
+
+                if (!a.tarikhProgram) {
+                    return 1;
+                }
+
+                if (!b.tarikhProgram) {
+                    return -1;
+                }
+
+                return a.tarikhProgram
+                    .localeCompare(
+                        b.tarikhProgram
+                    );
+
+            }
+        );
+
+
+
+        /* ==================================================
+           SORT PAST — NEWEST FIRST
+        ================================================== */
+
+        pastActivities.sort(
+            (a, b) =>
+                b.tarikhProgram
+                    .localeCompare(
+                        a.tarikhProgram
+                    )
+        );
+
+
+
+        /* ==================================================
+           CURRENT HTML
+        ================================================== */
+
+        const currentHTML =
+            currentActivities.length > 0
+
+                ? currentActivities
+                    .map(createActivityCard)
+                    .join("")
+
+                : `
+
+                    <div class="empty-message">
+
+                        Tiada aktiviti akan datang
+                        buat masa ini.
+
+                    </div>
+
+                `;
+
+
+
+        /* ==================================================
+           PAST HTML
+        ================================================== */
+
+        const pastHTML =
+            pastActivities.length > 0
+
+                ? `
+
+                    <div class="past-section">
+
+
+                        <div class="past-heading">
+
+                            <h2>
+                                Aktiviti Terdahulu
+                            </h2>
+
+                            <p>
+                                Lihat program dan aktiviti
+                                yang telah berlangsung.
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="past-toggle-container">
+
+                            <button
+                                type="button"
+                                id="pastToggle"
+                                class="past-toggle"
+                            >
+
+                                Lihat Aktiviti Terdahulu
+
+                            </button>
+
+                        </div>
+
+
+
+                        <div
+                            id="pastList"
+                            class="past-list"
+                        >
+
+                            ${
+                                pastActivities
+                                    .map(
+                                        createPastCard
+                                    )
+                                    .join("")
+                            }
+
+                        </div>
+
+
+                    </div>
+
+                `
+
+                : "";
+
+
+
+        container.innerHTML = `
+
+            ${currentHTML}
+
+            ${pastHTML}
+
+        `;
+
+
+
+        /* ==================================================
+           PAST BUTTON
+        ================================================== */
+
+        const pastToggle =
+            document.getElementById(
+                "pastToggle"
+            );
+
+
+        const pastList =
+            document.getElementById(
+                "pastList"
+            );
+
+
+        if (
+            pastToggle &&
+            pastList
+        ) {
+
+
+            pastToggle.addEventListener(
+                "click",
+                function () {
+
+
+                    const visible =
+                        pastList.classList.toggle(
+                            "visible"
+                        );
+
+
+                    pastToggle.textContent =
+                        visible
+                            ? "Sembunyikan Aktiviti Terdahulu"
+                            : "Lihat Aktiviti Terdahulu";
+
+
+                }
+            );
+
+
+        }
+
+
+    } catch (error) {
+
+
+        console.error(
+            "Aktiviti error:",
+            error
+        );
+
+
+        container.innerHTML = `
+
+            <div class="error-message">
+
+                Maklumat aktiviti tidak dapat
+                dimuatkan buat masa ini.
+
+            </div>
+
+        `;
+
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   START
+========================================================== */
+
+loadAktiviti();
+
+
+</script>
+
+
+
+<script>
+const mobileMoreButton = document.getElementById("mobileMoreButton");
+const mobileMoreMenu = document.getElementById("mobileMoreMenu");
+
+mobileMoreButton.addEventListener("click", () => {
+    const isOpen = mobileMoreMenu.classList.toggle("open");
+    mobileMoreButton.setAttribute("aria-expanded", isOpen);
+
+    if (isOpen) {
+        mobileMoreButton.style.color = "#087A35";
+        mobileMoreButton.style.background = "#F1F8F3";
+    } else {
+        mobileMoreButton.style.color = "";
+        mobileMoreButton.style.background = "";
+    }
+});
+
+document.addEventListener("click", (event) => {
+    const clickedInsideMenu = mobileMoreMenu.contains(event.target);
+    const clickedButton = mobileMoreButton.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedButton) {
+        mobileMoreMenu.classList.remove("open");
+        mobileMoreButton.setAttribute("aria-expanded", "false");
+        mobileMoreButton.style.color = "";
+        mobileMoreButton.style.background = "";
+    }
+});
+</script>
+
+</body>
+
+</html>
