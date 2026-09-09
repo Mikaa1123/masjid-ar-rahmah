@@ -743,12 +743,28 @@ Masjid Ar-Rahmah Sarikei`;
                 : generatedMessage;
 
         /*
-        WhatsApp may treat the whole message as right-to-left when
-        the first strong-directional text is Arabic. Prefix an invisible
-        Left-to-Right Mark so Malay text keeps its normal direction.
+        WhatsApp determines text direction paragraph-by-paragraph.
+        A single LTR marker at the start is not enough when the message
+        begins with Arabic. Add an invisible direction marker to every
+        non-empty line: Arabic lines use RTL, Malay/Latin lines use LTR.
         */
         const LRM = "\u200E";
-        const message = LRM + baseMessage;
+        const RLM = "\u200F";
+        const arabicPattern = /[\u0600-\u06FF]/;
+
+        const message =
+            baseMessage
+                .split("\n")
+                .map(line => {
+                    if (!line.trim()) {
+                        return line;
+                    }
+
+                    return arabicPattern.test(line)
+                        ? RLM + line
+                        : LRM + line;
+                })
+                .join("\n");
 
         async function copyText(textToCopy) {
 
