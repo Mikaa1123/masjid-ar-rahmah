@@ -737,10 +737,18 @@ Masjid Ar-Rahmah Sarikei`;
         Use the approved text from Apps Script when available.
         Otherwise use the locally generated version above.
         */
-        const message =
+        const baseMessage =
             latest.teksHebahan && String(latest.teksHebahan).trim()
                 ? String(latest.teksHebahan).trim()
                 : generatedMessage;
+
+        /*
+        WhatsApp may treat the whole message as right-to-left when
+        the first strong-directional text is Arabic. Prefix an invisible
+        Left-to-Right Mark so Malay text keeps its normal direction.
+        */
+        const LRM = "\u200E";
+        const message = LRM + baseMessage;
 
         async function copyText(textToCopy) {
 
